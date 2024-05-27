@@ -69,7 +69,7 @@ const Header = () => {
       <Nav>
         <NavLink href="#about">About</NavLink>
         <NavLink href="#projects">Projects</NavLink>
-        <NavLink href="#portafolio">Contacts</NavLink>
+        <NavLink href="#portfolio">Contacts</NavLink>
       </Nav>
       <SocialIcons>
         <IconLink href="https://github.com/chicho377" target="_blank"><FaGithub /></IconLink>
