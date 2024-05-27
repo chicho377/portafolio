@@ -2,18 +2,30 @@ import React from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Projects from './components/Projects';
-import Contact from './components/Contact';
-import './App.css'; // Puedes agregar tus estilos aquí
+import Contacts from './components/Contacts';
+import styled from 'styled-components';
 
-const App = () => {
+
+const AppContainer = styled.div`
+  font-family: 'Roboto', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  min-height: 100vh;
+`;
+
+function App() {
   return (
-    <div className="App">
-      <Header />
-      <About />
-      <Projects />
-      <Contact />
-    </div>
+    <>
+      
+      <AppContainer>
+        <Header />
+        <About />
+        <Projects />
+        <Contacts />
+      </AppContainer>
+    </>
   );
-};
+}
+
 
 export default App;
