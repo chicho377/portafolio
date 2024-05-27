@@ -62,7 +62,12 @@ const Projects = () => {
             Descripción breve del proyecto 2.
           </ProjectDescription>
         </ProjectCard>
-        {/* Añade más ProjectCard según sea necesario */}
+        <ProjectCard>
+          <ProjectTitle>Project 3</ProjectTitle>
+          <ProjectDescription>
+            Descripción breve del proyecto 3.
+          </ProjectDescription>
+        </ProjectCard>
       </ProjectsGrid>
     </ProjectsSection>
   );
