@@ -28,7 +28,7 @@ const About = () => {
     <AboutSection id="about">
       <Title>About Me</Title>
       <Description>
-        Soy un desarrollador web apasionado por la tecnología y el diseño moderno. Me encanta crear interfaces de usuario interactivas y atractivas.
+        Soy estudiante de Ingeniería en Sistemas y soy un desarrollador apasionado por la tecnología y el diseño moderno. Me encanta crear nuevos programas y aprender nuevas tecnologías.
       </Description>
     </AboutSection>
   );

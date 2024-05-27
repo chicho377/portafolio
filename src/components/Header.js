@@ -57,9 +57,9 @@ const Header = () => {
         <NavLink href="#contacts">Contacts</NavLink>
       </Nav>
       <SocialIcons>
-        <IconLink href="https://github.com" target="_blank"><FaGithub /></IconLink>
-        <IconLink href="https://linkedin.com" target="_blank"><FaLinkedin /></IconLink>
-        <IconLink href="https://twitter.com" target="_blank"><FaTwitter /></IconLink>
+        <IconLink href="https://github.com/chicho377" target="_blank"><FaGithub /></IconLink>
+        <IconLink href="https://www.linkedin.com/in/fabricio-mora-904927255/" target="_blank"><FaLinkedin /></IconLink>
+        <IconLink href="https://x.com/FabricioMora377" target="_blank"><FaTwitter /></IconLink>
       </SocialIcons>
     </HeaderContainer>
   );
