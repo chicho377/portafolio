@@ -16,7 +16,6 @@ const AppContainer = styled.div`
 function App() {
   return (
     <>
-      
       <AppContainer>
         <Header />
         <About />
