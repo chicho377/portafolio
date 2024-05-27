@@ -9,17 +9,29 @@ const HeaderContainer = styled.header`
   padding: 20px;
   background: #0a0a0a;
   color: #fff;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 const Logo = styled.h1`
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: #00ffcc;
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
 `;
 
 const Nav = styled.nav`
   display: flex;
   gap: 20px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
 `;
 
 const NavLink = styled.a`
@@ -36,6 +48,9 @@ const NavLink = styled.a`
 const SocialIcons = styled.div`
   display: flex;
   gap: 15px;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const IconLink = styled.a`

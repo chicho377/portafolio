@@ -1,19 +1,28 @@
-// GlobalStyles.js
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyles = createGlobalStyle`
-  * {
+const GlobalStyle = createGlobalStyle`
+  html {
     box-sizing: border-box;
+    font-size: 16px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
     margin: 0;
     padding: 0;
-  }
-
-  body {
-    background: #0a0a0a;
-    color: #fff;
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 `;
 
-export default GlobalStyles;
+export default GlobalStyle;
