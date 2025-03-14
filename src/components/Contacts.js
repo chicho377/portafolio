@@ -144,7 +144,7 @@ const Contacts = () => {
         <ContactCard>
           <ContactTitle>Desarrollador Web</ContactTitle>
           <ContactText>
-            Experimentado en la construcción de aplicaciones web responsivas.
+            Experimentado en la construcción de aplicaciones web.
             ¡Hablemos de tu proyecto!
           </ContactText>
           <ContactButton onClick={() => openModal('Desarrollador Web', 'morafabricio86@gmail.com')}>Contáctame</ContactButton>
@@ -159,7 +159,7 @@ const Contacts = () => {
         <ContactCard>
           <ContactTitle>Desarrollador Fullstack</ContactTitle>
           <ContactText>
-            Experto en desarrollo tanto front-end como back-end. ¡Construyamos grandes cosas juntos!
+            Experiencia en desarrollo tanto front-end como back-end. ¡Construyamos grandes cosas juntos!
           </ContactText>
           <ContactButton onClick={() => openModal('Desarrollador Fullstack', 'morafabricio86@gmail.com')}>Contáctame</ContactButton>
         </ContactCard>
