@@ -50,6 +50,21 @@ const Subtitle = styled.p`
   max-width: 760px;
 `;
 
+const Title = styled.h2`
+  font-size: clamp(2.3rem, 3.5vw, 3rem);
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+`;
+
+const Subtitle = styled.p`
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(233, 233, 255, 0.74);
+  max-width: 760px;
+`;
+
 const Grid = styled.div`
   display: grid;
   gap: 28px;
@@ -82,6 +97,18 @@ const CardContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+`;
+
+const CardTitle = styled.h3`
+  margin: 0;
+  font-size: clamp(1.5rem, 2.2vw, 1.9rem);
+  color: #ffffff;
+`;
+
+const CardContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 `;
 
 const CardTitle = styled.h3`
