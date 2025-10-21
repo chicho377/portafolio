@@ -34,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
 
   a {

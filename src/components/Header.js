@@ -37,6 +37,14 @@ const Brand = styled.a`
   }
 `;
 
+const BrandAccent = styled.span`
+  background: linear-gradient(90deg, #38f9d7 0%, #8b5cf6 50%, #ff7ad9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
+`;
+
 const Nav = styled.nav`
   display: flex;
   align-items: center;
