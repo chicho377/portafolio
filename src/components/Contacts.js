@@ -6,20 +6,9 @@ import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Section = styled.section`
-  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 36px;
-
-  &:before {
-    content: '';
-    position: absolute;
-    inset: -80px -18vw -80px;
-    background: radial-gradient(circle at 15% 20%, rgba(56, 249, 215, 0.12), transparent 60%),
-      radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.12), transparent 65%);
-    opacity: 0.8;
-    z-index: -1;
-  }
+  gap: 32px;
 `;
 
 const TitleGroup = styled.div`
@@ -30,28 +19,16 @@ const TitleGroup = styled.div`
 `;
 
 const Eyebrow = styled.span`
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.82rem;
-  letter-spacing: 0.24em;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(245, 245, 255, 0.56);
-
-  &:before {
-    content: '';
-    width: 32px;
-    height: 1px;
-    background: linear-gradient(90deg, rgba(56, 249, 215, 0.75), rgba(56, 249, 215, 0));
-  }
+  color: rgba(245, 245, 255, 0.5);
 `;
 
 const Title = styled.h2`
-  font-size: clamp(2.3rem, 3.4vw, 3.1rem);
+  font-size: clamp(2.1rem, 3.2vw, 2.7rem);
   margin: 0;
   color: #ffffff;
-  text-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
 `;
 
 const Subtitle = styled.p`
@@ -72,34 +49,13 @@ const ContactGrid = styled.div`
 `;
 
 const Card = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 34px;
-  border-radius: 26px;
-  background: linear-gradient(140deg, rgba(8, 8, 14, 0.92) 0%, rgba(14, 14, 22, 0.94) 100%);
+  padding: 32px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(8, 8, 12, 0.92) 0%, rgba(16, 16, 22, 0.94) 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  overflow: hidden;
-
-  &:before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 26px;
-    background: linear-gradient(135deg, rgba(56, 249, 215, 0.08), rgba(139, 92, 246, 0.1));
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-
-  &:hover:before {
-    opacity: 1;
-  }
-
-  > * {
-    position: relative;
-    z-index: 1;
-  }
 `;
 
 const ChannelList = styled.div`
@@ -112,30 +68,28 @@ const Channel = styled.a`
   align-items: center;
   gap: 16px;
   padding: 18px 20px;
-  border-radius: 20px;
+  border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.04);
-  color: rgba(233, 233, 255, 0.82);
-  transition: transform 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(233, 233, 255, 0.8);
+  transition: transform 0.3s ease, border-color 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px);
-    border-color: rgba(56, 249, 215, 0.45);
-    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-4px);
+    border-color: rgba(0, 255, 204, 0.35);
   }
 `;
 
 const ChannelIcon = styled.span`
   width: 44px;
   height: 44px;
-  border-radius: 16px;
+  border-radius: 14px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
-  background: rgba(56, 249, 215, 0.16);
-  color: #38f9d7;
-  box-shadow: 0 12px 24px rgba(56, 249, 215, 0.2);
+  background: rgba(0, 255, 204, 0.12);
+  color: #00ffcc;
 `;
 
 const ChannelText = styled.div`
@@ -157,33 +111,12 @@ const ChannelValue = styled.span`
 `;
 
 const Form = styled.form`
-  position: relative;
   display: grid;
   gap: 20px;
-  padding: 38px;
-  border-radius: 26px;
-  background: rgba(255, 255, 255, 0.04);
+  padding: 36px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  overflow: hidden;
-
-  &:before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 26px;
-    background: linear-gradient(135deg, rgba(56, 249, 215, 0.08), rgba(139, 92, 246, 0.08));
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-
-  &:focus-within:before {
-    opacity: 1;
-  }
-
-  > * {
-    position: relative;
-    z-index: 1;
-  }
 `;
 
 const FieldGroup = styled.div`
@@ -216,8 +149,8 @@ const Input = styled.input`
 
   &:focus {
     outline: none;
-    border-color: rgba(56, 249, 215, 0.6);
-    box-shadow: 0 0 0 3px rgba(56, 249, 215, 0.25);
+    border-color: rgba(0, 255, 204, 0.6);
+    box-shadow: 0 0 0 3px rgba(0, 255, 204, 0.2);
   }
 `;
 
@@ -234,8 +167,8 @@ const TextArea = styled.textarea`
 
   &:focus {
     outline: none;
-    border-color: rgba(56, 249, 215, 0.6);
-    box-shadow: 0 0 0 3px rgba(56, 249, 215, 0.25);
+    border-color: rgba(0, 255, 204, 0.6);
+    box-shadow: 0 0 0 3px rgba(0, 255, 204, 0.2);
   }
 `;
 
@@ -249,21 +182,20 @@ const Submit = styled.button`
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 16px 30px;
-  border-radius: 22px;
-  background: linear-gradient(120deg, #38f9d7 0%, #8b5cf6 55%, #ff7ad9 100%);
+  padding: 16px 28px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #00ffcc 0%, #8b5cf6 100%);
   color: #050505;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  box-shadow: 0 20px 50px rgba(139, 92, 246, 0.35);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-3px) scale(1.01);
-    box-shadow: 0 26px 60px rgba(139, 92, 246, 0.45);
+    transform: translateY(-3px);
+    box-shadow: 0 18px 50px rgba(139, 92, 246, 0.35);
   }
 
   &:disabled {
