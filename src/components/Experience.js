@@ -3,20 +3,9 @@ import styled from 'styled-components';
 import { FiClock, FiExternalLink } from 'react-icons/fi';
 
 const Section = styled.section`
-  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 36px;
-
-  &:before {
-    content: '';
-    position: absolute;
-    inset: -60px -18vw -40px;
-    background: radial-gradient(circle at 20% 0%, rgba(56, 249, 215, 0.1), transparent 60%),
-      radial-gradient(circle at 80% 30%, rgba(139, 92, 246, 0.12), transparent 65%);
-    opacity: 0.7;
-    z-index: -1;
-  }
+  gap: 32px;
 `;
 
 const TitleGroup = styled.div`
@@ -27,28 +16,16 @@ const TitleGroup = styled.div`
 `;
 
 const Eyebrow = styled.span`
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.82rem;
-  letter-spacing: 0.24em;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(245, 245, 255, 0.56);
-
-  &:before {
-    content: '';
-    width: 30px;
-    height: 1px;
-    background: linear-gradient(90deg, rgba(56, 249, 215, 0.7), rgba(56, 249, 215, 0));
-  }
+  color: rgba(245, 245, 255, 0.5);
 `;
 
 const Title = styled.h2`
-  font-size: clamp(2.3rem, 3.4vw, 3rem);
+  font-size: clamp(2.1rem, 3.2vw, 2.7rem);
   margin: 0;
   color: #ffffff;
-  text-shadow: 0 20px 36px rgba(0, 0, 0, 0.35);
 `;
 
 const Timeline = styled.div`
@@ -64,24 +41,23 @@ const Timeline = styled.div`
     bottom: 8px;
     left: 0;
     width: 2px;
-    background: linear-gradient(180deg, rgba(56, 249, 215, 0.35) 0%, rgba(139, 92, 246, 0.3) 100%);
+    background: linear-gradient(180deg, rgba(0, 255, 204, 0.3) 0%, rgba(139, 92, 246, 0.3) 100%);
   }
 `;
 
 const Item = styled.article`
   position: relative;
   margin-left: 32px;
-  padding: 26px 30px;
-  border-radius: 24px;
-  background: linear-gradient(145deg, rgba(8, 8, 14, 0.92), rgba(14, 14, 22, 0.94));
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(8px);
-  overflow: hidden;
-  transition: border-color 0.35s ease, transform 0.35s ease;
+  padding: 24px 28px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  transition: border-color 0.3s ease, transform 0.3s ease;
 
   &:hover {
-    border-color: rgba(56, 249, 215, 0.45);
-    transform: translateY(-6px);
+    border-color: rgba(0, 255, 204, 0.35);
+    transform: translateY(-4px);
   }
 
   &:before {
@@ -92,27 +68,8 @@ const Item = styled.article`
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #38f9d7;
-    box-shadow: 0 0 0 6px rgba(56, 249, 215, 0.2);
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 24px;
-    background: linear-gradient(135deg, rgba(56, 249, 215, 0.08), rgba(139, 92, 246, 0.1));
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-
-  &:hover:after {
-    opacity: 1;
-  }
-
-  > * {
-    position: relative;
-    z-index: 1;
+    background: #00ffcc;
+    box-shadow: 0 0 0 6px rgba(0, 255, 204, 0.18);
   }
 `;
 
@@ -172,12 +129,7 @@ const CTA = styled.a`
   font-size: 0.9rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #38f9d7;
-  transition: color 0.35s ease;
-
-  &:hover {
-    color: #ff7ad9;
-  }
+  color: #00ffcc;
 `;
 
 const experiences = [

@@ -3,45 +3,21 @@ import styled from 'styled-components';
 import { FiAward, FiFeather, FiGlobe, FiUsers } from 'react-icons/fi';
 
 const Section = styled.section`
-  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  gap: 64px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 60px;
   align-items: center;
-
-  &:before {
-    content: '';
-    position: absolute;
-    inset: -80px 10% auto;
-    height: 1px;
-    background: linear-gradient(90deg, rgba(56, 249, 215, 0), rgba(56, 249, 215, 0.5), rgba(139, 92, 246, 0));
-    opacity: 0.65;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    inset: -120px -18vw;
-    background: radial-gradient(circle at 20% 40%, rgba(56, 249, 215, 0.16), transparent 65%),
-      radial-gradient(circle at 65% 60%, rgba(139, 92, 246, 0.16), transparent 65%);
-    filter: blur(0px);
-    opacity: 0.75;
-    z-index: -1;
-  }
 
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
-    gap: 44px;
-    &:before {
-      inset: -60px 15% auto;
-    }
+    gap: 40px;
   }
 `;
 
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
 `;
 
 const TitleGroup = styled.div`
@@ -51,72 +27,42 @@ const TitleGroup = styled.div`
 `;
 
 const Eyebrow = styled.span`
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.82rem;
-  letter-spacing: 0.24em;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(245, 245, 255, 0.55);
-
-  &:before {
-    content: '';
-    width: 32px;
-    height: 1px;
-    background: linear-gradient(90deg, rgba(56, 249, 215, 0.7), rgba(56, 249, 215, 0));
-  }
+  color: rgba(245, 245, 255, 0.5);
 `;
 
 const Title = styled.h2`
-  font-size: clamp(2.4rem, 3.6vw, 3rem);
+  font-size: clamp(2.2rem, 3.4vw, 2.8rem);
   margin: 0;
   color: #ffffff;
-  text-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 `;
 
 const Highlight = styled.span`
-  background: linear-gradient(90deg, #38f9d7 0%, #8b5cf6 60%, #ff7ad9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #00ffcc;
 `;
 
 const Description = styled.p`
-  font-size: 1.08rem;
-  line-height: 1.85;
-  color: rgba(233, 233, 255, 0.74);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(233, 233, 255, 0.76);
 `;
 
 const BulletGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 22px;
+  gap: 20px;
 `;
 
 const Bullet = styled.div`
-  position: relative;
-  padding: 22px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  overflow: hidden;
-
-  &:after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 20px;
-    background: linear-gradient(135deg, rgba(56, 249, 215, 0.08), rgba(139, 92, 246, 0.08));
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-
-  &:hover:after {
-    opacity: 1;
-  }
+  gap: 14px;
 `;
 
 const BulletIcon = styled.span`
@@ -126,10 +72,9 @@ const BulletIcon = styled.span`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #38f9d7;
-  background: rgba(56, 249, 215, 0.12);
+  color: #00ffcc;
+  background: rgba(0, 255, 204, 0.1);
   font-size: 1.2rem;
-  box-shadow: 0 10px 24px rgba(56, 249, 215, 0.18);
 `;
 
 const BulletTitle = styled.h3`
@@ -156,33 +101,22 @@ const Portrait = styled.div`
   position: relative;
   width: min(420px, 100%);
   aspect-ratio: 4 / 5;
-  border-radius: 38px;
+  border-radius: 36px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  background: radial-gradient(circle at top left, rgba(56, 249, 215, 0.2), transparent 70%),
-    radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.22), transparent 65%),
-    rgba(10, 10, 16, 0.92);
-  box-shadow: 0 28px 80px rgba(6, 6, 12, 0.65);
+  background: linear-gradient(135deg, rgba(0, 255, 204, 0.16) 0%, rgba(139, 92, 246, 0.22) 100%);
+  box-shadow: 0 24px 70px rgba(6, 6, 10, 0.65);
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &:after {
-    content: '';
-    position: absolute;
-    inset: 12px;
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    opacity: 0.5;
-  }
 `;
 
 const PortraitGlow = styled.div`
   position: absolute;
   inset: 12px;
   border-radius: 28px;
-  background: linear-gradient(150deg, rgba(10, 10, 16, 0.94) 0%, rgba(16, 16, 24, 0.96) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(135deg, rgba(10, 10, 14, 0.92) 0%, rgba(16, 16, 22, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.04);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -193,7 +127,7 @@ const PortraitGlow = styled.div`
 `;
 
 const PortraitEmoji = styled.span`
-  font-size: clamp(3.2rem, 5vw, 3.8rem);
+  font-size: clamp(3rem, 5vw, 3.6rem);
 `;
 
 const PortraitQuote = styled.p`
@@ -205,10 +139,8 @@ const PortraitQuote = styled.p`
 
 const Signature = styled.span`
   font-family: 'Caveat', cursive;
-  font-size: 1.9rem;
-  background: linear-gradient(90deg, #38f9d7 0%, #8b5cf6 70%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.8);
 `;
 
 const About = () => {

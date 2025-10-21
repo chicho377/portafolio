@@ -3,20 +3,9 @@ import styled from 'styled-components';
 import { FiCode, FiFigma, FiTrendingUp } from 'react-icons/fi';
 
 const Section = styled.section`
-  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 36px;
-
-  &:before {
-    content: '';
-    position: absolute;
-    inset: -60px -16vw -80px;
-    background: radial-gradient(circle at 10% 20%, rgba(56, 249, 215, 0.12), transparent 65%),
-      radial-gradient(circle at 80% 60%, rgba(139, 92, 246, 0.14), transparent 60%);
-    opacity: 0.7;
-    z-index: -1;
-  }
+  gap: 32px;
 `;
 
 const TitleGroup = styled.div`
@@ -27,28 +16,16 @@ const TitleGroup = styled.div`
 `;
 
 const Eyebrow = styled.span`
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.82rem;
-  letter-spacing: 0.24em;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(245, 245, 255, 0.56);
-
-  &:before {
-    content: '';
-    width: 30px;
-    height: 1px;
-    background: linear-gradient(90deg, rgba(56, 249, 215, 0.75), rgba(56, 249, 215, 0));
-  }
+  color: rgba(245, 245, 255, 0.5);
 `;
 
 const Title = styled.h2`
-  font-size: clamp(2.3rem, 3.4vw, 3rem);
+  font-size: clamp(2.1rem, 3.3vw, 2.7rem);
   margin: 0;
   color: #ffffff;
-  text-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
 `;
 
 const Subtitle = styled.p`
@@ -61,28 +38,28 @@ const Subtitle = styled.p`
 const CardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 26px;
+  gap: 24px;
 `;
 
 const Card = styled.div`
   position: relative;
-  padding: 34px;
-  border-radius: 26px;
-  background: linear-gradient(145deg, rgba(8, 8, 14, 0.94) 0%, rgba(14, 14, 22, 0.92) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 32px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(8, 8, 12, 0.95) 0%, rgba(14, 14, 20, 0.92) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   overflow: hidden;
-  transition: transform 0.35s ease, border-color 0.35s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 
   &:hover {
-    transform: translateY(-8px);
-    border-color: rgba(56, 249, 215, 0.45);
+    transform: translateY(-6px);
+    border-color: rgba(0, 255, 204, 0.4);
   }
 `;
 
 const Glow = styled.span`
   position: absolute;
   inset: -120px;
-  background: radial-gradient(circle, rgba(56, 249, 215, 0.22) 0%, transparent 55%);
+  background: radial-gradient(circle, rgba(0, 255, 204, 0.2) 0%, transparent 55%);
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -99,11 +76,10 @@ const Icon = styled.span`
   align-items: center;
   justify-content: center;
   border-radius: 16px;
-  background: rgba(56, 249, 215, 0.16);
-  color: #38f9d7;
+  background: rgba(0, 255, 204, 0.14);
+  color: #00ffcc;
   font-size: 1.5rem;
   margin-bottom: 18px;
-  box-shadow: 0 14px 28px rgba(56, 249, 215, 0.22);
 `;
 
 const CardTitle = styled.h3`
@@ -129,11 +105,10 @@ const Pill = styled.span`
   font-size: 0.85rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 9px 15px;
+  padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(245, 245, 255, 0.88);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(245, 245, 255, 0.84);
 `;
 
 const services = [
