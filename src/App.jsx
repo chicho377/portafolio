@@ -67,6 +67,39 @@ const testimonials = [
   },
 ];
 
+const portfolioIdeas = [
+  {
+    title: 'Caso interactivo con scroll narrativo',
+    description:
+      'Cuenta un proyecto como si fuera un mini documental: plantea el reto, muestra decisiones clave y termina con resultados medibles.',
+  },
+  {
+    title: 'Mapa de impacto en tiempo real',
+    description:
+      'Una visualización que conecte tus proyectos con objetivos reales (engagement, ventas, accesibilidad) usando data simulada.',
+  },
+  {
+    title: 'Experimentos rápidos “1 semana”',
+    description:
+      'Microproyectos de 5 a 7 días con hipótesis, prototipo y aprendizajes. Muestran velocidad y mentalidad iterativa.',
+  },
+  {
+    title: 'Laboratorio de IA creativa',
+    description:
+      'Explora prompts, flujos y resultados de IA para diseño o copy, con reflexiones sobre ética y criterio visual.',
+  },
+  {
+    title: 'Kit de diseño personal',
+    description:
+      'Incluye tokens, componentes y pautas de accesibilidad para demostrar pensamiento sistémico.',
+  },
+  {
+    title: 'Backstage de procesos',
+    description:
+      'Muestra wireframes, feedback recibido y cómo iteraste. Humaniza el trabajo y demuestra colaboración.',
+  },
+];
+
 const counters = [
   { label: 'Proyectos académicos', value: 12 },
   { label: 'Hackathons', value: 4 },
@@ -79,99 +112,31 @@ const techStack = [
     name: 'React',
     description: 'UI moderna y componentes reutilizables.',
     color: 'react',
-    svg: (
-      <svg viewBox="0 0 128 128" aria-hidden="true">
-        <circle cx="64" cy="64" r="10" fill="currentColor" />
-        <ellipse cx="64" cy="64" rx="46" ry="18" fill="none" stroke="currentColor" strokeWidth="6" />
-        <ellipse
-          cx="64"
-          cy="64"
-          rx="46"
-          ry="18"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="6"
-          transform="rotate(60 64 64)"
-        />
-        <ellipse
-          cx="64"
-          cy="64"
-          rx="46"
-          ry="18"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="6"
-          transform="rotate(120 64 64)"
-        />
-      </svg>
-    ),
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   },
   {
     name: 'JavaScript',
     description: 'Interacciones y lógica dinámica.',
     color: 'javascript',
-    svg: (
-      <svg viewBox="0 0 128 128" aria-hidden="true">
-        <rect x="14" y="14" width="100" height="100" rx="16" fill="currentColor" opacity="0.18" />
-        <path
-          d="M52 44v32c0 10-7 18-18 18"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="10"
-          strokeLinecap="round"
-        />
-        <path
-          d="M70 44h22v40c0 9-7 16-16 16-8 0-14-5-16-12"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="10"
-          strokeLinecap="round"
-        />
-      </svg>
-    ),
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
   },
   {
     name: 'Figma',
     description: 'Prototipos y sistemas visuales.',
     color: 'figma',
-    svg: (
-      <svg viewBox="0 0 128 128" aria-hidden="true">
-        <path d="M64 16a16 16 0 1 0 0 32h16a16 16 0 0 0 0-32z" fill="currentColor" />
-        <path d="M48 48a16 16 0 1 0 0 32h16V48z" fill="currentColor" opacity="0.8" />
-        <path d="M64 48h16a16 16 0 1 0 0-32H64z" fill="currentColor" opacity="0.6" />
-        <path d="M64 80a16 16 0 1 0 0 32h16a16 16 0 0 0 0-32z" fill="currentColor" opacity="0.8" />
-        <path d="M48 80a16 16 0 1 0 0 32h16V80z" fill="currentColor" opacity="0.6" />
-      </svg>
-    ),
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
   },
   {
     name: 'CSS',
     description: 'Animaciones y diseño responsivo.',
     color: 'css',
-    svg: (
-      <svg viewBox="0 0 128 128" aria-hidden="true">
-        <path d="M24 16h80l-8 84-32 12-32-12z" fill="currentColor" opacity="0.2" />
-        <path d="M40 38h48l-2 16H42z" fill="currentColor" />
-        <path d="M42 62h38l-2 18-17 6-17-6z" fill="currentColor" opacity="0.9" />
-      </svg>
-    ),
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
   },
   {
     name: 'Git',
     description: 'Colaboración y control de versiones.',
     color: 'git',
-    svg: (
-      <svg viewBox="0 0 128 128" aria-hidden="true">
-        <path
-          d="M48 14L18 44a10 10 0 0 0 0 14l30 30a10 10 0 0 0 14 0l30-30a10 10 0 0 0 0-14L62 14a10 10 0 0 0-14 0z"
-          fill="currentColor"
-          opacity="0.2"
-        />
-        <circle cx="50" cy="48" r="9" fill="currentColor" />
-        <circle cx="78" cy="76" r="9" fill="currentColor" />
-        <path d="M50 48v24l24 12" stroke="currentColor" strokeWidth="8" fill="none" strokeLinecap="round" />
-      </svg>
-    ),
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
   },
 ];
 
@@ -292,6 +257,24 @@ function App() {
         </div>
       </section>
 
+      <section className="section ideas">
+        <div className="section-heading">
+          <h2>Ideas para un portafolio innovador</h2>
+          <p>
+            Propuestas que resaltan storytelling, data y procesos para que tu trabajo se
+            sienta diferente y memorable.
+          </p>
+        </div>
+        <div className="ideas-grid">
+          {portfolioIdeas.map((idea) => (
+            <article key={idea.title} className="idea-card">
+              <h3>{idea.title}</h3>
+              <p>{idea.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="section stack">
         <div className="section-heading">
           <h2>Stack creativo</h2>
@@ -300,7 +283,9 @@ function App() {
         <div className="stack-grid">
           {techStack.map((tool) => (
             <div key={tool.name} className={`stack-card ${tool.color}`}>
-              <div className="stack-icon">{tool.svg}</div>
+              <div className="stack-icon">
+                <img src={tool.logoUrl} alt={`${tool.name} logo`} loading="lazy" />
+              </div>
               <div>
                 <h3>{tool.name}</h3>
                 <p>{tool.description}</p>
