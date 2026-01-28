@@ -67,6 +67,39 @@ const testimonials = [
   },
 ];
 
+const portfolioIdeas = [
+  {
+    title: 'Caso interactivo con scroll narrativo',
+    description:
+      'Cuenta un proyecto como si fuera un mini documental: plantea el reto, muestra decisiones clave y termina con resultados medibles.',
+  },
+  {
+    title: 'Mapa de impacto en tiempo real',
+    description:
+      'Una visualización que conecte tus proyectos con objetivos reales (engagement, ventas, accesibilidad) usando data simulada.',
+  },
+  {
+    title: 'Experimentos rápidos “1 semana”',
+    description:
+      'Microproyectos de 5 a 7 días con hipótesis, prototipo y aprendizajes. Muestran velocidad y mentalidad iterativa.',
+  },
+  {
+    title: 'Laboratorio de IA creativa',
+    description:
+      'Explora prompts, flujos y resultados de IA para diseño o copy, con reflexiones sobre ética y criterio visual.',
+  },
+  {
+    title: 'Kit de diseño personal',
+    description:
+      'Incluye tokens, componentes y pautas de accesibilidad para demostrar pensamiento sistémico.',
+  },
+  {
+    title: 'Backstage de procesos',
+    description:
+      'Muestra wireframes, feedback recibido y cómo iteraste. Humaniza el trabajo y demuestra colaboración.',
+  },
+];
+
 const counters = [
   { label: 'Proyectos académicos', value: 12 },
   { label: 'Hackathons', value: 4 },
@@ -81,28 +114,12 @@ const techStack = [
     color: 'react',
     svg: (
       <svg viewBox="0 0 128 128" aria-hidden="true">
-        <circle cx="64" cy="64" r="10" fill="currentColor" />
-        <ellipse cx="64" cy="64" rx="46" ry="18" fill="none" stroke="currentColor" strokeWidth="6" />
-        <ellipse
-          cx="64"
-          cy="64"
-          rx="46"
-          ry="18"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="6"
-          transform="rotate(60 64 64)"
-        />
-        <ellipse
-          cx="64"
-          cy="64"
-          rx="46"
-          ry="18"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="6"
-          transform="rotate(120 64 64)"
-        />
+        <g fill="none" stroke="#61DAFB" strokeWidth="6">
+          <ellipse cx="64" cy="64" rx="46" ry="18" />
+          <ellipse cx="64" cy="64" rx="46" ry="18" transform="rotate(60 64 64)" />
+          <ellipse cx="64" cy="64" rx="46" ry="18" transform="rotate(120 64 64)" />
+        </g>
+        <circle cx="64" cy="64" r="8" fill="#61DAFB" />
       </svg>
     ),
   },
@@ -112,20 +129,10 @@ const techStack = [
     color: 'javascript',
     svg: (
       <svg viewBox="0 0 128 128" aria-hidden="true">
-        <rect x="14" y="14" width="100" height="100" rx="16" fill="currentColor" opacity="0.18" />
+        <rect x="12" y="12" width="104" height="104" rx="12" fill="#F7DF1E" />
         <path
-          d="M52 44v32c0 10-7 18-18 18"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="10"
-          strokeLinecap="round"
-        />
-        <path
-          d="M70 44h22v40c0 9-7 16-16 16-8 0-14-5-16-12"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="10"
-          strokeLinecap="round"
+          d="M38 92l8-4c2 4 4 7 9 7 4 0 7-2 7-9V58h10v29c0 11-6 17-16 17-9 0-14-5-17-12zm40-1l8-5c2 4 5 7 10 7 4 0 7-2 7-5 0-4-3-5-8-7l-3-1c-9-4-15-8-15-18 0-9 7-15 17-15 8 0 13 3 17 10l-8 5c-2-3-4-5-9-5-4 0-7 2-7 5 0 3 2 5 7 7l3 1c10 4 16 9 16 19 0 11-9 17-19 17-11 0-18-5-21-12z"
+          fill="#111827"
         />
       </svg>
     ),
@@ -136,11 +143,11 @@ const techStack = [
     color: 'figma',
     svg: (
       <svg viewBox="0 0 128 128" aria-hidden="true">
-        <path d="M64 16a16 16 0 1 0 0 32h16a16 16 0 0 0 0-32z" fill="currentColor" />
-        <path d="M48 48a16 16 0 1 0 0 32h16V48z" fill="currentColor" opacity="0.8" />
-        <path d="M64 48h16a16 16 0 1 0 0-32H64z" fill="currentColor" opacity="0.6" />
-        <path d="M64 80a16 16 0 1 0 0 32h16a16 16 0 0 0 0-32z" fill="currentColor" opacity="0.8" />
-        <path d="M48 80a16 16 0 1 0 0 32h16V80z" fill="currentColor" opacity="0.6" />
+        <path d="M48 16a16 16 0 1 1 0 32H32V32a16 16 0 0 1 16-16z" fill="#F24E1E" />
+        <path d="M80 16a16 16 0 1 1 0 32H48V16z" fill="#FF7262" />
+        <path d="M48 48h16a16 16 0 1 1 0 32H48V48z" fill="#A259FF" />
+        <path d="M48 80a16 16 0 1 1 0 32H32V96a16 16 0 0 1 16-16z" fill="#1ABCFE" />
+        <path d="M80 64a16 16 0 1 1-32 0 16 16 0 0 1 32 0z" fill="#0ACF83" />
       </svg>
     ),
   },
@@ -150,9 +157,10 @@ const techStack = [
     color: 'css',
     svg: (
       <svg viewBox="0 0 128 128" aria-hidden="true">
-        <path d="M24 16h80l-8 84-32 12-32-12z" fill="currentColor" opacity="0.2" />
-        <path d="M40 38h48l-2 16H42z" fill="currentColor" />
-        <path d="M42 62h38l-2 18-17 6-17-6z" fill="currentColor" opacity="0.9" />
+        <path d="M20 14h88l-8 90-36 12-36-12z" fill="#1572B6" />
+        <path d="M64 110l29-9 7-78H64z" fill="#33A9DC" />
+        <path d="M44 40h20v12H56l1 12h7v12H46zm0 28h12l1 12 7 2v13l-17-6z" fill="#fff" />
+        <path d="M84 40H64v12h19l-2 12H64v12h15l-1 12-14 4v13l26-8 3-31z" fill="#EBEBEB" />
       </svg>
     ),
   },
@@ -162,14 +170,11 @@ const techStack = [
     color: 'git',
     svg: (
       <svg viewBox="0 0 128 128" aria-hidden="true">
+        <path d="M118 58L70 10a6 6 0 0 0-8 0L10 62a6 6 0 0 0 0 8l48 48a6 6 0 0 0 8 0l52-52a6 6 0 0 0 0-8z" fill="#F03C2E" />
         <path
-          d="M48 14L18 44a10 10 0 0 0 0 14l30 30a10 10 0 0 0 14 0l30-30a10 10 0 0 0 0-14L62 14a10 10 0 0 0-14 0z"
-          fill="currentColor"
-          opacity="0.2"
+          d="M60 36a8 8 0 1 0 5 14l12 12a8 8 0 1 0 4-3l-13-13a8 8 0 0 0-8-10zm0 40a8 8 0 1 0 5 14l14 14a8 8 0 1 0 4-4L69 86a8 8 0 0 0-9-10z"
+          fill="#fff"
         />
-        <circle cx="50" cy="48" r="9" fill="currentColor" />
-        <circle cx="78" cy="76" r="9" fill="currentColor" />
-        <path d="M50 48v24l24 12" stroke="currentColor" strokeWidth="8" fill="none" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -288,6 +293,24 @@ function App() {
               <span>{skill}</span>
               <div className="skill-pulse"></div>
             </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section ideas">
+        <div className="section-heading">
+          <h2>Ideas para un portafolio innovador</h2>
+          <p>
+            Propuestas que resaltan storytelling, data y procesos para que tu trabajo se
+            sienta diferente y memorable.
+          </p>
+        </div>
+        <div className="ideas-grid">
+          {portfolioIdeas.map((idea) => (
+            <article key={idea.title} className="idea-card">
+              <h3>{idea.title}</h3>
+              <p>{idea.description}</p>
+            </article>
           ))}
         </div>
       </section>
