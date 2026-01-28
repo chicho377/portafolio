@@ -8,6 +8,91 @@
   -webkit-font-smoothing: antialiased;
   --pointer-x: 50%;
   --pointer-y: 40%;
+  --color-text-primary: #f7f5ff;
+  --color-text-secondary: #cbd5f5;
+  --color-text-tertiary: #e0e7ff;
+  --color-text-muted: #94a3b8;
+  --color-eyebrow: #a5b4fc;
+  --color-link-accent: #f9a8d4;
+  --color-link-hover: #a78bfa;
+  --color-year: #818cf8;
+  --color-marquee: #c7d2fe;
+  --body-gradient: radial-gradient(circle at var(--pointer-x) var(--pointer-y), #2c2156, #090512 52%);
+  --pointer-glow: radial-gradient(600px circle at var(--pointer-x) var(--pointer-y), rgba(113, 76, 255, 0.2), transparent 55%);
+  --surface-glass: rgba(255, 255, 255, 0.05);
+  --surface-glass-strong: rgba(255, 255, 255, 0.08);
+  --surface-glass-border: rgba(255, 255, 255, 0.12);
+  --surface-glass-border-strong: rgba(255, 255, 255, 0.2);
+  --surface-glass-soft: rgba(255, 255, 255, 0.04);
+  --surface-glass-hover: rgba(255, 255, 255, 0.08);
+  --surface-card-grad-start: rgba(255, 255, 255, 0.05);
+  --surface-card-grad-end: rgba(255, 255, 255, 0);
+  --shadow-strong: rgba(15, 23, 42, 0.45);
+  --shadow-elevated: rgba(15, 23, 42, 0.35);
+  --shadow-primary: rgba(88, 80, 255, 0.35);
+  --shadow-primary-strong: rgba(88, 80, 255, 0.5);
+  --accent-gradient-start: #8b5cf6;
+  --accent-gradient-end: #ec4899;
+  --primary-gradient-start: #7c3aed;
+  --primary-gradient-end: #2563eb;
+  --project-glow: radial-gradient(circle at top left, rgba(99, 102, 241, 0.3), transparent 60%);
+  --skill-pulse-start: rgba(167, 139, 250, 0.2);
+  --skill-pulse-end: rgba(236, 72, 153, 0.2);
+  --idea-card-grad-start: rgba(59, 130, 246, 0.08);
+  --idea-card-grad-end: rgba(236, 72, 153, 0.08);
+  --idea-card-border-hover: rgba(96, 165, 250, 0.35);
+  --showcase-grad-start: rgba(59, 130, 246, 0.15);
+  --showcase-grad-end: rgba(236, 72, 153, 0.15);
+  --showcase-sheen: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.2), transparent 50%);
+  --timeline-card-bg: rgba(15, 23, 42, 0.6);
+  --timeline-border-hover: rgba(129, 140, 248, 0.4);
+  --testimonial-border-hover: rgba(251, 113, 133, 0.35);
+  --contact-grad-start: rgba(14, 165, 233, 0.2);
+  --contact-grad-end: rgba(168, 85, 247, 0.2);
+  --stack-icon-bg: rgba(147, 197, 253, 0.12);
+  --stack-icon-color: #93c5fd;
+}
+
+[data-theme='light'] {
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #334155;
+  --color-text-tertiary: #1e293b;
+  --color-text-muted: #64748b;
+  --color-eyebrow: #6366f1;
+  --color-link-accent: #db2777;
+  --color-link-hover: #7c3aed;
+  --color-year: #4f46e5;
+  --color-marquee: #475569;
+  --body-gradient: radial-gradient(circle at var(--pointer-x) var(--pointer-y), #dbeafe, #f8fafc 60%);
+  --pointer-glow: radial-gradient(600px circle at var(--pointer-x) var(--pointer-y), rgba(99, 102, 241, 0.18), transparent 55%);
+  --surface-glass: rgba(255, 255, 255, 0.7);
+  --surface-glass-strong: rgba(255, 255, 255, 0.85);
+  --surface-glass-border: rgba(15, 23, 42, 0.08);
+  --surface-glass-border-strong: rgba(15, 23, 42, 0.12);
+  --surface-glass-soft: rgba(255, 255, 255, 0.6);
+  --surface-glass-hover: rgba(255, 255, 255, 0.9);
+  --surface-card-grad-start: rgba(255, 255, 255, 0.95);
+  --surface-card-grad-end: rgba(241, 245, 249, 0.8);
+  --shadow-strong: rgba(15, 23, 42, 0.15);
+  --shadow-elevated: rgba(15, 23, 42, 0.1);
+  --shadow-primary: rgba(37, 99, 235, 0.2);
+  --shadow-primary-strong: rgba(37, 99, 235, 0.3);
+  --project-glow: radial-gradient(circle at top left, rgba(59, 130, 246, 0.2), transparent 60%);
+  --skill-pulse-start: rgba(99, 102, 241, 0.18);
+  --skill-pulse-end: rgba(236, 72, 153, 0.18);
+  --idea-card-grad-start: rgba(59, 130, 246, 0.12);
+  --idea-card-grad-end: rgba(236, 72, 153, 0.12);
+  --idea-card-border-hover: rgba(37, 99, 235, 0.28);
+  --showcase-grad-start: rgba(99, 102, 241, 0.16);
+  --showcase-grad-end: rgba(236, 72, 153, 0.16);
+  --showcase-sheen: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.6), transparent 50%);
+  --timeline-card-bg: rgba(255, 255, 255, 0.9);
+  --timeline-border-hover: rgba(99, 102, 241, 0.3);
+  --testimonial-border-hover: rgba(236, 72, 153, 0.25);
+  --contact-grad-start: rgba(59, 130, 246, 0.2);
+  --contact-grad-end: rgba(168, 85, 247, 0.18);
+  --stack-icon-bg: rgba(59, 130, 246, 0.12);
+  --stack-icon-color: #2563eb;
 }
 
 * {
@@ -18,7 +103,8 @@
 
 body {
   min-height: 100vh;
-  background: radial-gradient(circle at var(--pointer-x) var(--pointer-y), #2c2156, #090512 52%);
+  color: var(--color-text-primary);
+  background: var(--body-gradient);
   overflow-x: hidden;
 }
 

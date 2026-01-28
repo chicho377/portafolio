@@ -171,8 +171,29 @@ function useRotatingWords(words) {
 
 function App() {
   usePointerGlow();
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === 'undefined') {
+      return 'dark';
+    }
+
+    const savedTheme = window.localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme;
+    }
+
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  });
   const rotatingWord = useRotatingWords(['interactiva', 'humana', 'futurista', 'curiosa']);
   const now = useMemo(() => new Date().getFullYear(), []);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    window.localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const handleToggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
 
   return (
     <div className="app">
@@ -184,6 +205,9 @@ function App() {
             <a href="#skills">Skills</a>
             <a href="#experiencia">Experiencia</a>
             <a href="#contacto" className="cta">Hablemos</a>
+            <button className="theme-toggle" type="button" onClick={handleToggleTheme}>
+              {theme === 'light' ? 'Modo oscuro' : 'Modo claro'}
+            </button>
           </div>
         </nav>
 
