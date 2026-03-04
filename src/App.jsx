@@ -223,7 +223,7 @@ function App() {
           </div>
           <div className="hero-actions">
             <a className="primary" href="#proyectos">Ver proyectos</a>
-            <a className="ghost" href="/CV_Fabricio_Mora_Gomez.rtf" download>
+            <a className="ghost" href="/public/CV_Fabricio_Mora_Gomez.docx" download>
               Descargar CV para Word
             </a>
           </div>
