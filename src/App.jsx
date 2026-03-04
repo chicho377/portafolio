@@ -160,7 +160,9 @@ const content = {
     ],
     contactHeading: 'Contacto',
     contactDescription:
-      'Fabricio Mora Gomez · Cédula 64885279 · Abierto a oportunidades en software, desarrollo web y TI.',
+      'Fabricio Mora Gomez · Celular +506 6488-5279 · Abierto a oportunidades en software, desarrollo web y TI.',
+    copyEmailNotification: '¡Correo copiado al portapapeles!',
+    copyEmailAriaLabel: 'Copiar correo',
     footer: 'Portafolio profesional.',
     footerExperience: 'Experiencia',
   },
@@ -318,7 +320,9 @@ const content = {
     ],
     contactHeading: 'Contact',
     contactDescription:
-      'Fabricio Mora Gomez · ID 64885279 · Open to opportunities in software, web development, and IT.',
+      'Fabricio Mora Gomez · Mobile +506 6488-5279 · Open to opportunities in software, web development, and IT.',
+    copyEmailNotification: 'Email copied to clipboard!',
+    copyEmailAriaLabel: 'Copy email',
     footer: 'Professional portfolio.',
     footerExperience: 'Experience',
   },
@@ -379,6 +383,7 @@ function App() {
     const savedLanguage = window.localStorage.getItem('language');
     return savedLanguage === 'en' ? 'en' : 'es';
   });
+  const [showCopyToast, setShowCopyToast] = useState(false);
 
   const t = content[language];
   const rotatingWord = useRotatingWords(t.rotatingWords);
@@ -400,6 +405,38 @@ function App() {
   const handleToggleLanguage = () => {
     setLanguage((prev) => (prev === 'es' ? 'en' : 'es'));
   };
+
+  const handleCopyEmail = async () => {
+    const email = 'morafabricio86@gmail.com';
+
+    try {
+      await navigator.clipboard.writeText(email);
+      setShowCopyToast(true);
+    } catch {
+      const input = document.createElement('textarea');
+      input.value = email;
+      input.style.position = 'fixed';
+      input.style.opacity = '0';
+      document.body.appendChild(input);
+      input.focus();
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      setShowCopyToast(true);
+    }
+  };
+
+  useEffect(() => {
+    if (!showCopyToast) {
+      return undefined;
+    }
+
+    const timer = setTimeout(() => {
+      setShowCopyToast(false);
+    }, 2200);
+
+    return () => clearTimeout(timer);
+  }, [showCopyToast]);
 
   return (
     <div className="app">
@@ -564,13 +601,24 @@ function App() {
             <p>{t.contactDescription}</p>
           </div>
           <div className="contact-actions">
-            <a className="primary" href="mailto:morafabricio86@gmail.com">morafabricio86@gmail.com</a>
+            <button
+              className="primary"
+              type="button"
+              onClick={handleCopyEmail}
+              aria-label={t.copyEmailAriaLabel}
+            >
+              morafabricio86@gmail.com
+            </button>
             <a className="ghost" href="https://github.com/chicho377" target="_blank" rel="noreferrer">
               github.com/chicho377
             </a>
           </div>
         </div>
       </section>
+
+      <div className={`copy-toast ${showCopyToast ? 'visible' : ''}`} role="status" aria-live="polite">
+        {t.copyEmailNotification}
+      </div>
 
       <footer className="footer">
         <p>© {now} Fabricio Mora Gomez · {t.footer}</p>
