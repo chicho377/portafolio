@@ -3,138 +3,132 @@ import './App.css';
 
 const projects = [
   {
-    title: 'Campus Hub',
-    tag: 'Proyecto académico',
+    title: 'Sitio web corporativo · 2000Siempre',
+    tag: 'Proyecto real (en proceso final)',
     description:
-      'Plataforma para organizar eventos universitarios con UX enfocada en estudiantes y notificaciones inteligentes.',
+      'Diseño y desarrollo completo de una web para empresa constructora, sin plantillas, cubriendo análisis, implementación, ajustes finales y testeo.',
   },
   {
-    title: 'LightBox Studio',
-    tag: 'Proyecto freelance',
+    title: 'DreamMovie',
+    tag: 'Proyecto destacado',
     description:
-      'Landing page con identidad visual moderna y storytelling para un estudio creativo local.',
+      'Creación de una plataforma web de boletería para cine desde cero: idea de negocio, branding, requerimientos, mockups y desarrollo con HTML, CSS, JS, PHP y MySQL.',
   },
   {
-    title: 'Pulse Track',
-    tag: 'Hackathon',
+    title: 'VITALIFE',
+    tag: 'Proyecto de escritorio',
     description:
-      'Dashboard en tiempo real para métricas de entrenamiento con visualizaciones fluidas y accesibles.',
+      'Sistema tipo punto de venta para farmacia con enfoque en experiencia de usuario y control de accesos por roles, desarrollado con C#, .NET y SQL Server.',
+  },
+  {
+    title: 'Portafolio personal profesional',
+    tag: 'Proyecto personal',
+    description:
+      'Construcción y mejora continua de un portafolio web para presentar perfil técnico, habilidades y proyectos con enfoque de empleabilidad junior.',
+  },
+  {
+    title: 'Prácticas de documentación técnica',
+    tag: 'Proyecto académico/personal',
+    description:
+      'Elaboración de documentación funcional y técnica para proyectos universitarios y personales, aplicando estructura clara y buenas prácticas.',
+  },
+  {
+    title: 'Ejercicios de desarrollo web',
+    tag: 'Formación práctica',
+    description:
+      'Desarrollo de mini proyectos y prácticas para reforzar lógica, frontend y backend con tecnologías como HTML, CSS, JavaScript y PHP.',
   },
 ];
 
 const skills = [
-  'React + Motion UI',
-  'UX/UI Design',
-  'Design Systems',
-  'Prototipado rápido',
-  'Datos & visualización',
-  'Aprendizaje continuo',
+  'C#',
+  'Java',
+  'HTML / CSS / JavaScript',
+  'PHP',
+  'MySQL y SQL Server',
+  'Git, Visual Studio y Jira',
+  'Scrum (fundamentos)',
 ];
 
 const timeline = [
   {
-    year: '2021',
-    title: 'Inicio en UX/UI',
-    description: 'Empecé a diseñar interfaces y aprendí fundamentos de diseño centrado en personas.',
-  },
-  {
-    year: '2022',
-    title: 'Proyectos académicos',
-    description: 'Colaboré en equipos multidisciplinarios creando productos digitales para clase.',
-  },
-  {
-    year: '2023',
-    title: 'Hackathons & Freelance',
-    description: 'Participé en hackathons y apoyé a emprendimientos locales con diseño web.',
-  },
-  {
     year: '2024',
-    title: 'Búsqueda de empleo',
-    description: 'Listo para aplicar mis habilidades en un equipo y seguir creciendo.',
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      '“Tiene una sensibilidad visual increíble y siempre busca mejorar la experiencia del usuario.”',
-    author: 'Camila Torres · Mentora UX',
+    title: 'Inicio de Ingeniería en Sistemas',
+    description: 'Ingreso a Universidad UTC y enfoque en desarrollo de software y TI.',
   },
   {
-    quote:
-      '“En el hackathon fue clave para aterrizar ideas complejas en interfaces claras.”',
-    author: 'Luis Méndez · Product Mentor',
+    year: '2024-2025',
+    title: 'Formación complementaria',
+    description:
+      'Cursos en Platzi y otras plataformas, incluyendo fundamentos de Scrum y buenas prácticas de desarrollo.',
+  },
+  {
+    year: 'Actualidad',
+    title: 'Proyecto para empresa constructora',
+    description:
+      'Desarrollo individual del sitio web de 2000Siempre, actualmente en etapa final y pruebas.',
+  },
+  {
+    year: 'Siguiente paso',
+    title: 'Ingreso al mercado laboral',
+    description:
+      'Búsqueda activa de oportunidad junior en software, desarrollo web o áreas de TI.',
   },
 ];
 
 const portfolioIdeas = [
   {
-    title: 'Caso interactivo con scroll narrativo',
+    title: 'Objetivo profesional claro',
     description:
-      'Cuenta un proyecto como si fuera un mini documental: plantea el reto, muestra decisiones clave y termina con resultados medibles.',
+      'Perfil orientado a construir soluciones de software funcionales, intuitivas y alineadas con necesidades de negocio.',
   },
   {
-    title: 'Mapa de impacto en tiempo real',
+    title: 'Valor diferencial',
     description:
-      'Una visualización que conecte tus proyectos con objetivos reales (engagement, ventas, accesibilidad) usando data simulada.',
+      'Experiencia en proyectos donde se cubre el ciclo completo: idea, documentación, diseño, desarrollo y pruebas.',
   },
   {
-    title: 'Experimentos rápidos “1 semana”',
+    title: 'Enfoque de mejora continua',
     description:
-      'Microproyectos de 5 a 7 días con hipótesis, prototipo y aprendizajes. Muestran velocidad y mentalidad iterativa.',
-  },
-  {
-    title: 'Laboratorio de IA creativa',
-    description:
-      'Explora prompts, flujos y resultados de IA para diseño o copy, con reflexiones sobre ética y criterio visual.',
-  },
-  {
-    title: 'Kit de diseño personal',
-    description:
-      'Incluye tokens, componentes y pautas de accesibilidad para demostrar pensamiento sistémico.',
-  },
-  {
-    title: 'Backstage de procesos',
-    description:
-      'Muestra wireframes, feedback recibido y cómo iteraste. Humaniza el trabajo y demuestra colaboración.',
+      'Aprendizaje constante en metodologías ágiles, herramientas modernas y buenas prácticas de desarrollo.',
   },
 ];
 
 const counters = [
-  { label: 'Proyectos académicos', value: 12 },
-  { label: 'Hackathons', value: 4 },
-  { label: 'Colaboraciones', value: 6 },
-  { label: 'Horas de estudio', value: '800+' },
+  { label: 'Proyecto real en curso', value: '1' },
+  { label: 'Proyectos destacados', value: '6' },
+  { label: 'Cuatrimestres restantes', value: '1' },
+  { label: 'Interés laboral', value: 'Puesto junior (software/web/TI)' },
 ];
 
 const techStack = [
   {
-    name: 'React',
-    description: 'UI moderna y componentes reutilizables.',
-    color: 'react',
-    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-  },
-  {
-    name: 'JavaScript',
-    description: 'Interacciones y lógica dinámica.',
+    name: 'C#',
+    description: 'Aplicaciones de escritorio y lógica de negocio.',
     color: 'javascript',
-    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
   },
   {
-    name: 'Figma',
-    description: 'Prototipos y sistemas visuales.',
+    name: 'Java',
+    description: 'Fundamentos sólidos de programación orientada a objetos.',
+    color: 'react',
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+  },
+  {
+    name: 'PHP',
+    description: 'Desarrollo backend para soluciones web.',
     color: 'figma',
-    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
   },
   {
-    name: 'CSS',
-    description: 'Animaciones y diseño responsivo.',
+    name: 'MySQL / SQL Server',
+    description: 'Modelado y gestión de bases de datos relacionales.',
     color: 'css',
-    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
   },
   {
     name: 'Git',
-    description: 'Colaboración y control de versiones.',
+    description: 'Control de versiones para trabajo organizado y colaborativo.',
     color: 'git',
     logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
   },
@@ -183,7 +177,7 @@ function App() {
 
     return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
   });
-  const rotatingWord = useRotatingWords(['interactiva', 'humana', 'futurista', 'curiosa']);
+  const rotatingWord = useRotatingWords(['funcionales', 'intuitivas', 'escalables', 'modernas']);
   const now = useMemo(() => new Date().getFullYear(), []);
 
   useEffect(() => {
@@ -199,12 +193,12 @@ function App() {
     <div className="app">
       <header className="hero">
         <nav className="nav">
-          <div className="logo">LUMINA</div>
+          <div className="logo">FABRICIO MORA</div>
           <div className="nav-links">
             <a href="#proyectos">Proyectos</a>
-            <a href="#skills">Skills</a>
+            <a href="#skills">Habilidades</a>
             <a href="#experiencia">Experiencia</a>
-            <a href="#contacto" className="cta">Hablemos</a>
+            <a href="#contacto" className="cta">Contacto</a>
             <button className="theme-toggle" type="button" onClick={handleToggleTheme}>
               {theme === 'light' ? 'Modo oscuro' : 'Modo claro'}
             </button>
@@ -212,25 +206,26 @@ function App() {
         </nav>
 
         <div className="hero-content">
-          <p className="eyebrow">Portafolio · Estudiante de Diseño & Producto</p>
+          <p className="eyebrow">Portafolio · Ingeniería en Sistemas</p>
           <h1>
-            Creo experiencias{' '}
-            <span className="gradient-text">{rotatingWord}</span> que convierten ideas en
-            impacto real.
+            Desarrollo soluciones <span className="gradient-text">{rotatingWord}</span> para
+            software, web y TI.
           </h1>
           <p className="hero-description">
-            Soy estudiante de diseño digital y construyo productos con estética moderna,
-            microinteracciones y narrativas claras. Busco mi primera oportunidad para crecer en
-            un equipo que valore la curiosidad y el aprendizaje continuo.
+            Soy Fabricio Mora Gomez, estudiante de Ingeniería en Sistemas en Universidad UTC.
+            Busco una oportunidad para aportar en desarrollo de software, desarrollo web o áreas de
+            TI, mientras continúo creciendo profesionalmente.
           </p>
           <div className="hero-badges">
-            <span>Disponible para prácticas</span>
-            <span>Remoto / Presencial</span>
-            <span>UX/UI + Frontend</span>
+            <span>Alajuela, Costa Rica</span>
+            <span>Disponible para oportunidad junior</span>
+            <span>Español nativo · Inglés intermedio</span>
           </div>
           <div className="hero-actions">
-            <button className="primary">Ver proyectos</button>
-            <button className="ghost">Descargar CV</button>
+            <a className="primary" href="#proyectos">Ver proyectos</a>
+            <a className="ghost" href="/CV_Fabricio_Mora_Gomez.rtf" download>
+              Descargar CV para Word
+            </a>
           </div>
         </div>
 
@@ -247,9 +242,7 @@ function App() {
       <section id="proyectos" className="section projects">
         <div className="section-heading">
           <h2>Proyectos destacados</h2>
-          <p>
-            Proyectos académicos, hackathons y colaboraciones que muestran mi potencial.
-          </p>
+          <p>Proyectos reales, académicos y de práctica con enfoque en calidad y buenas prácticas.</p>
         </div>
         <div className="project-grid">
           {projects.map((project) => (
@@ -258,7 +251,6 @@ function App() {
               <div className="project-tag">{project.tag}</div>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <button className="link">Ver caso →</button>
             </article>
           ))}
         </div>
@@ -266,10 +258,8 @@ function App() {
 
       <section id="skills" className="section skills">
         <div className="section-heading">
-          <h2>Skills en evolución</h2>
-          <p>
-            Estoy en constante aprendizaje para unir diseño, tecnología y emoción.
-          </p>
+          <h2>Habilidades</h2>
+          <p>Base técnica sólida con mentalidad de aprendizaje continuo.</p>
         </div>
         <div className="skills-grid">
           {skills.map((skill) => (
@@ -283,11 +273,8 @@ function App() {
 
       <section className="section ideas">
         <div className="section-heading">
-          <h2>Ideas para un portafolio innovador</h2>
-          <p>
-            Propuestas que resaltan storytelling, data y procesos para que tu trabajo se
-            sienta diferente y memorable.
-          </p>
+          <h2>Perfil profesional</h2>
+          <p>Información clave organizada para un reclutamiento rápido y claro.</p>
         </div>
         <div className="ideas-grid">
           {portfolioIdeas.map((idea) => (
@@ -301,8 +288,8 @@ function App() {
 
       <section className="section stack">
         <div className="section-heading">
-          <h2>Stack creativo</h2>
-          <p>Herramientas y tecnologías que uso para construir experiencias visuales.</p>
+          <h2>Tecnologías principales</h2>
+          <p>Herramientas y lenguajes que utilizo en mis proyectos.</p>
         </div>
         <div className="stack-grid">
           {techStack.map((tool) => (
@@ -329,21 +316,21 @@ function App() {
       <section className="section showcase">
         <div className="showcase-card">
           <div>
-            <p className="eyebrow">Laboratorio creativo</p>
-            <h2>Transformo ideas en experiencias listas para el mundo real</h2>
+            <p className="eyebrow">Educación</p>
+            <h2>Universidad UTC · Ingeniería en Sistemas</h2>
             <p>
-              Desde landing pages hasta dashboards, cada entrega está pensada para comunicar
-              valor y sumar impacto al equipo.
+              Inicio en 2024. Actualmente cursando la etapa final de la carrera, con un cuatrimestre
+              pendiente para finalizar.
             </p>
           </div>
           <div className="showcase-metrics">
             <div>
-              <h3>+18</h3>
-              <p>Prototipos creados en el último año</p>
+              <h3>2024</h3>
+              <p>Año de inicio</p>
             </div>
             <div>
-              <h3>3</h3>
-              <p>Equipos multidisciplinarios</p>
+              <h3>+Cursos</h3>
+              <p>Platzi y otras plataformas (incluye Scrum)</p>
             </div>
           </div>
         </div>
@@ -351,8 +338,8 @@ function App() {
 
       <section id="experiencia" className="section timeline">
         <div className="section-heading">
-          <h2>Ruta de aprendizaje</h2>
-          <p>Una evolución constante entre creatividad, producto y tecnología.</p>
+          <h2>Ruta de crecimiento</h2>
+          <p>Evolución académica y práctica orientada al desarrollo profesional.</p>
         </div>
         <div className="timeline-grid">
           {timeline.map((item) => (
@@ -365,43 +352,30 @@ function App() {
         </div>
       </section>
 
-      <section className="section testimonials">
-        <div className="section-heading">
-          <h2>Lo que dicen de mí</h2>
-          <p>Feedback de mentores y compañeros con los que colaboré.</p>
-        </div>
-        <div className="testimonial-grid">
-          {testimonials.map((item) => (
-            <div key={item.author} className="testimonial-card">
-              <p>{item.quote}</p>
-              <span>{item.author}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section id="contacto" className="section contact">
         <div className="contact-card">
           <div>
-            <h2>¿Buscas talento junior con ganas de crecer?</h2>
+            <h2>Contacto</h2>
             <p>
-              Estoy listo para aportar energía, aprendizaje y creatividad a tu equipo. Respondo en
-              menos de 24 horas.
+              Fabricio Mora Gomez · Cédula 64885279 · Abierto a oportunidades en software,
+              desarrollo web y TI.
             </p>
           </div>
           <div className="contact-actions">
-            <button className="primary">Agendar entrevista</button>
-            <button className="ghost">hola@tuemail.com</button>
+            <a className="primary" href="mailto:morafabricio86@gmail.com">morafabricio86@gmail.com</a>
+            <a className="ghost" href="https://github.com/chicho377" target="_blank" rel="noreferrer">
+              github.com/chicho377
+            </a>
           </div>
         </div>
       </section>
 
       <footer className="footer">
-        <p>© {now} Portafolio estudiantil. Diseñado para inspirar.</p>
+        <p>© {now} Fabricio Mora Gomez · Portafolio profesional.</p>
         <div className="footer-links">
-          <a href="https://behance.net">Behance</a>
-          <a href="https://dribbble.com">Dribbble</a>
-          <a href="https://linkedin.com">LinkedIn</a>
+          <a href="mailto:morafabricio86@gmail.com">Email</a>
+          <a href="https://github.com/chicho377" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="#experiencia">Experiencia</a>
         </div>
       </footer>
     </div>
