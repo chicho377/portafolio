@@ -163,6 +163,7 @@ const content = {
       'Fabricio Mora Gomez · Celular +506 6488-5279 · Abierto a oportunidades en software, desarrollo web y TI.',
     copyEmailNotification: '¡Correo copiado al portapapeles!',
     copyEmailAriaLabel: 'Copiar correo',
+    scrollTopAriaLabel: 'Volver al inicio',
     footer: 'Portafolio profesional.',
     footerExperience: 'Experiencia',
   },
@@ -323,6 +324,7 @@ const content = {
       'Fabricio Mora Gomez · Mobile +506 6488-5279 · Open to opportunities in software, web development, and IT.',
     copyEmailNotification: 'Email copied to clipboard!',
     copyEmailAriaLabel: 'Copy email',
+    scrollTopAriaLabel: 'Back to top',
     footer: 'Professional portfolio.',
     footerExperience: 'Experience',
   },
@@ -384,6 +386,7 @@ function App() {
     return savedLanguage === 'en' ? 'en' : 'es';
   });
   const [showCopyToast, setShowCopyToast] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const t = content[language];
   const rotatingWord = useRotatingWords(t.rotatingWords);
@@ -437,6 +440,21 @@ function App() {
 
     return () => clearTimeout(timer);
   }, [showCopyToast]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 420);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className="app">
@@ -619,6 +637,15 @@ function App() {
       <div className={`copy-toast ${showCopyToast ? 'visible' : ''}`} role="status" aria-live="polite">
         {t.copyEmailNotification}
       </div>
+
+      <button
+        className={`scroll-top-button ${showScrollTop ? 'visible' : ''}`}
+        type="button"
+        onClick={handleScrollToTop}
+        aria-label={t.scrollTopAriaLabel}
+      >
+        ↑
+      </button>
 
       <footer className="footer">
         <p>© {now} Fabricio Mora Gomez · {t.footer}</p>
